@@ -1,3 +1,9 @@
 {
-  "apps": []
+  "apps": [
+    {
+      "slug": "quanttide-intention-of-business-entity",
+      "name": "量潮科技工作意图",
+      "description": "各业务和职能的意图"
+    }
+  ]
 }
