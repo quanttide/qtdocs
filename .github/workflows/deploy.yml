@@ -1,0 +1,27 @@
+name: Deploy qtdocs home to OSS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm ci
+      - run: npm run build
+
+      - uses: manyuanrong/setup-ossutil@v3
+        with:
+          endpoint: oss-cn-hangzhou.aliyuncs.com
+          access-key-id: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
+
+      - run: ossutil cp dist/ oss://qtdocs-site/ -r -f --meta=Cache-Control:public,max-age=300
