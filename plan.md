@@ -323,11 +323,11 @@ slug：`quanttide-intention-of-payment-engineering`
 
 仓库：`quanttide/quanttide-bylaw-of-business-entity`
 发布位置：量潮云目录，`qtcloud/metering.md`
-版本或 commit：`204fdcd`
+版本或 commit：`8f5833a`
 发布地址：https://quanttide.github.io/quanttide-bylaw-of-business-entity/qtcloud/metering/
 负责人：`ztzzh`
 结果：GitHub Actions 构建和 GitHub Pages 部署成功，线上验收通过。
-备注：将 `quanttide-intention-of-data-engineering` 的商业模式整理为《量潮云计量计费章程》，按 7 章 31 条章程格式接入量潮云目录，并置于销售管理章程之前。
+备注：将 `quanttide-intention-of-data-engineering` 的商业模式整理为《量潮云计量计费章程》，按 7 章 31 条章程格式接入量潮云目录，并置于销售管理章程之前；补充按量执行与订阅、套餐等销售形态的边界，以及与《量潮科技支付工程章程》的账务衔接。
 
 ## 七、固定规则和已知坑
 
