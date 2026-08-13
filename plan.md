@@ -41,7 +41,7 @@ qtdocs 仓库
 ### 待完成
 
 - [x] 评估并上线 `quanttide-intention-of-payment-engineering`；
-- [ ] 评估并上线 `quanttide-intention-of-human-resources`；
+- [x] 评估并上线 `quanttide-intention-of-human-resources`；
 - [ ] 评估并上线 `quanttide-intention-of-data-engineering`；
 - [ ] 继续盘点第二大脑下属的其他文档仓库；
 - [ ] 等子手册上线后，评估并处理 `quanttide-handbook`；
@@ -58,6 +58,21 @@ qtdocs 仓库
 4. 内容仍是空骨架的仓库暂不发布，只做内容跟踪。
 
 原则：先完整跑通一个仓库，再批量复制流程。
+
+### 章程类文档特别规则
+
+当 intention 文档、日志提炼内容或其他资料需要纳入 `quanttide-bylaw-of-business-entity` 等正式章程站点时，先按现有章程格式整理为草稿，并交由负责人审核后再发布。
+
+章程格式统一遵循：
+
+- 一级标题使用 `# 量潮科技<业务域><章程类型>章程`；
+- 二级标题使用 `## 第X章 <章节名>`；
+- 条款标题使用 `**第X条 条款名称**`，条号全文连续编号；
+- 条款内并列内容优先使用 `（一）`、`（二）` 等中文编号；
+- 正文避免使用“为什么做”“要什么”“下一步”“当前阶段”等提纲式或阶段性表达；
+- 临时计划、历史演化和反直觉观察应抽象为长期稳定的定位、原则、边界或管理要求。
+
+发布前必须先向负责人确认发布位置，包括目标站点、目录、TOC 分组、访问路径或 slug。未确认发布目录前，不接入线上目录、不推送触发部署。
 
 ## 四、单个文档仓库上线流程
 
@@ -93,6 +108,14 @@ OSS 路径：oss://qtdocs-site/<slug>/
 ```
 
 slug 一旦发布，原则上不再修改，避免旧链接失效。
+
+发布位置必须由负责人确认后再执行。若文档不是独立发布到 `docs.quanttide.com/<slug>/`，而是接入某个既有站点，应明确：
+
+- 目标仓库；
+- 目标目录；
+- TOC 分组；
+- 页面文件名；
+- 线上访问路径。
 
 ### 阶段 3：准备部署 CI
 
@@ -202,7 +225,7 @@ https://docs.quanttide.com/<slug>/
 
 建议顺序：
 
-1. `quanttide-intention-of-payment-engineering`
+1. `quanttide-intention-of-payment-engineering`（已提交）
 2. `quanttide-intention-of-human-resources`
 3. `quanttide-intention-of-data-engineering`
 
@@ -254,6 +277,7 @@ slug：
 
 发布前确认：
 
+- [ ] 负责人已确认发布目录或站点位置；
 - [ ] 内容负责人确认可以公开；
 - [ ] slug 已确定；
 - [ ] 构建配置已确认；
@@ -281,6 +305,22 @@ slug：`quanttide-intention-of-payment-engineering`
 结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
 备注：`BASE_URL` 使用 `/quanttide-intention-of-payment-engineering`；首页、CSS、JavaScript、`index.json` 和 favicon 均已验证返回正常。
 
+仓库：`quanttide/quanttide-bylaw-of-business-entity`
+发布位置：人力资源目录，`human/training.md`
+版本或 commit：`abc4458`
+发布地址：https://quanttide.github.io/quanttide-bylaw-of-business-entity/human/training/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 GitHub Pages 部署成功，线上验收通过。
+备注：将 `quanttide-intention-of-human-resources` 的培训意图整理为《量潮科技培训工作章程》，按 7 章 29 条章程格式接入人力资源目录。
+
+仓库：`quanttide/quanttide-bylaw-of-business-entity`
+发布位置：商务管理目录，`business/payment-engineering.md`
+版本或 commit：`6bbe851`
+发布地址：https://quanttide.github.io/quanttide-bylaw-of-business-entity/business/payment-engineering/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 GitHub Pages 部署成功，线上验收通过。
+备注：将支付工程意图整理为《量潮科技支付工程章程》，按 6 章 21 条章程格式接入商务管理目录。
+
 ## 七、固定规则和已知坑
 
 以下规则不能随意改动：
@@ -295,6 +335,7 @@ slug：`quanttide-intention-of-payment-engineering`
 - `manyuanrong/setup-ossutil` 使用精确版本 `@v3.0`；
 - OSS 静态网站托管必须开启 `SupportSubDir=true`；
 - 发布后 CDN 可能仍缓存旧响应，必要时重新部署或等待 TTL 过期。
+- 正式章程文档发布前必须先确认放置目录，并按章程格式整理为负责人审核过的草稿。
 
 ## 八、完成标准
 
