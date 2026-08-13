@@ -85,6 +85,7 @@ jobs:
 |------|------|------|
 | quanttide-tech | 量潮科技第二大脑 | 主文档 |
 | quanttide-intention-of-business-entity | 量潮科技工作意图 | 考核用 |
+| quanttide-intention-of-payment-engineering | 量潮支付工程意图 | 支付工程意图 |
 
 ## 六、常见问题
 

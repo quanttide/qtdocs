@@ -9,6 +9,11 @@
       "slug": "quanttide-intention-of-business-entity",
       "name": "量潮科技工作意图",
       "description": "各业务和职能的意图"
+    },
+    {
+      "slug": "quanttide-intention-of-payment-engineering",
+      "name": "量潮支付工程意图",
+      "description": "记录支付工程的目标、原则、价值主张与演化路径"
     }
   ]
 }
