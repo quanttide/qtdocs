@@ -42,7 +42,7 @@ qtdocs 仓库
 
 - [x] 评估并上线 `quanttide-intention-of-payment-engineering`；
 - [x] 评估并上线 `quanttide-intention-of-human-resources`；
-- [ ] 评估并上线 `quanttide-intention-of-data-engineering`；
+- [x] 评估并上线 `quanttide-intention-of-data-engineering`；
 - [ ] 继续盘点第二大脑下属的其他文档仓库；
 - [ ] 等子手册上线后，评估并处理 `quanttide-handbook`；
 - [x] 每次新增站点后更新 `public/apps.json`；
@@ -226,8 +226,8 @@ https://docs.quanttide.com/<slug>/
 建议顺序：
 
 1. `quanttide-intention-of-payment-engineering`（已提交）
-2. `quanttide-intention-of-human-resources`
-3. `quanttide-intention-of-data-engineering`
+2. `quanttide-intention-of-human-resources`（已提交）
+3. `quanttide-intention-of-data-engineering`（已提交）
 
 每个仓库先判断内容是否已经脱离“骨架状态”。如果只有少量占位 Markdown，则先补内容，不直接上线。
 
@@ -321,6 +321,14 @@ slug：`quanttide-intention-of-payment-engineering`
 结果：GitHub Actions 构建和 GitHub Pages 部署成功，线上验收通过。
 备注：将支付工程意图整理为《量潮科技支付工程章程》，按 6 章 21 条章程格式接入商务管理目录。
 
+仓库：`quanttide/quanttide-bylaw-of-business-entity`
+发布位置：量潮云目录，`qtcloud/metering.md`
+版本或 commit：`204fdcd`
+发布地址：https://quanttide.github.io/quanttide-bylaw-of-business-entity/qtcloud/metering/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 GitHub Pages 部署成功，线上验收通过。
+备注：将 `quanttide-intention-of-data-engineering` 的商业模式整理为《量潮云计量计费章程》，按 7 章 31 条章程格式接入量潮云目录，并置于销售管理章程之前。
+
 ## 七、固定规则和已知坑
 
 以下规则不能随意改动：
@@ -352,8 +360,8 @@ slug：`quanttide-intention-of-payment-engineering`
 
 下一次继续工作时，先执行：
 
-1. 盘点 `quanttide-intention-of-human-resources`；
-2. 判断是否已经具备独立上线条件；
-3. 如果具备条件，准备并验证它的 OSS 部署 workflow；
-4. 上线成功后更新 `public/apps.json` 和本文件的发布记录；
-5. 再按相同流程处理 data-engineering。
+1. 继续盘点第二大脑下属的其他文档仓库；
+2. 判断各仓库是否已经具备独立上线或接入既有站点的条件；
+3. 发布前先确认目标站点、目录、TOC 分组和访问路径；
+4. 上线成功后更新 `public/apps.json` 或目标站点目录，并补充本文件的发布记录；
+5. 等子手册上线后，重新评估并处理 `quanttide-handbook`。
