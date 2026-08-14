@@ -46,7 +46,7 @@ qtdocs 仓库
 - [x] 独立上线 `quanttide-handbook` 总入口；
 - [ ] 继续盘点第二大脑下属的其他文档仓库；
 - [x] 按五个一级目录规划并上线 `quanttide-handbook` 一级目录页；
-- [ ] 子手册上线后更新 `quanttide-handbook` 总入口对应链接；
+- [x] 子手册上线后更新 `quanttide-handbook` 总入口对应链接；
 - [x] 每次新增站点后更新 `public/apps.json`；
 - [x] 每次上线后补充发布记录。
 
@@ -493,6 +493,14 @@ slug：`quanttide-handbook`
 负责人：`ztzzh`
 结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
 备注：新增五个一级目录页：业务、研发、管理、语言/框架/工具、学科/行业；总入口改为一级目录导航，33 个子手册链接保留在对应目录页中，暂未迁移子手册本体。
+
+仓库：`quanttide/quanttide-handbook-of-devops`
+slug：`quanttide-handbook-of-devops`
+版本或 commit：`ab4b727`
+发布地址：https://docs.quanttide.com/quanttide-handbook/engineering/devops/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
+备注：首个子手册已迁移到 `quanttide-handbook` 命名空间下；研发目录页已同步更新到新地址。
 
 ## 七、固定规则和已知坑
 
