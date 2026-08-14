@@ -45,7 +45,8 @@ qtdocs 仓库
 - [x] 独立上线 `quanttide-intention-of-data-engineering`；
 - [x] 独立上线 `quanttide-handbook` 总入口；
 - [ ] 继续盘点第二大脑下属的其他文档仓库；
-- [ ] 继续逐个评估并处理 `quanttide-handbook` 下属子手册；
+- [x] 按五个一级目录规划并上线 `quanttide-handbook` 一级目录页；
+- [ ] 子手册上线后更新 `quanttide-handbook` 总入口对应链接；
 - [x] 每次新增站点后更新 `public/apps.json`；
 - [x] 每次上线后补充发布记录。
 
@@ -54,8 +55,8 @@ qtdocs 仓库
 按以下顺序推进：
 
 1. 先处理内容相对完整、能够独立访问的 intention 文档；
-2. 再处理内容已经稳定的第二大脑子文档；
-3. `quanttide-handbook` 先作为总入口上线，子手册按内容成熟度逐个处理；
+2. `quanttide-handbook` 总入口和五个一级目录页已独立上线，下一步优先处理内容成熟的子手册；
+3. 子手册按内容成熟度逐个处理，成熟一个上线一个，并逐步替换总入口中的对应链接；
 4. 内容仍是空骨架的仓库暂不发布，只做内容跟踪。
 
 原则：先完整跑通一个仓库，再批量复制流程。
@@ -82,6 +83,79 @@ qtdocs 仓库
 - 临时计划、历史演化和反直觉观察应抽象为长期稳定的定位、原则、边界或管理要求。
 
 发布前必须先向负责人确认发布位置，包括目标站点、目录、TOC 分组、访问路径或 slug。未确认发布目录前，不接入线上目录、不推送触发部署。
+
+### 工作手册特别规则
+
+`quanttide-handbook` 是量潮工作手册总入口，已独立发布到
+`https://docs.quanttide.com/quanttide-handbook/`。五个一级目录页也已上线。后续子手册原则上放在该总入口命名空间下，
+不在 `docs.quanttide.com` 首页把 33 个子手册全部做成并列入口。
+
+子手册目录按 `quanttide-handbook/_toc.yml` 的 5 个一级导航组织：
+
+```text
+量潮工作手册
+├─ 业务
+│  ├─ 企业服务手册
+│  └─ 客户端服务手册
+├─ 研发
+│  ├─ 开发者工具手册
+│  ├─ DevOps手册
+│  ├─ 网络应用手册
+│  ├─ 数据工程手册
+│  ├─ 云计算手册
+│  ├─ 数据分析手册
+│  ├─ 生成式人工智能手册
+│  └─ 数字身份手册
+├─ 管理
+│  ├─ 团队管理手册
+│  ├─ 产品研发手册
+│  ├─ 团队协作手册
+│  ├─ 项目管理手册
+│  ├─ 数字资产管理手册
+│  ├─ 文档管理手册
+│  ├─ 客户支持手册
+│  ├─ 财务管理手册
+│  ├─ 法务管理手册
+│  ├─ 开源管理手册
+│  ├─ 公共关系手册
+│  ├─ 创赛管理手册
+│  └─ 新媒体管理手册
+├─ 语言、框架和工具
+│  ├─ C语言手册
+│  ├─ Django手册
+│  ├─ Docker手册
+│  ├─ FastAPI手册
+│  ├─ FigJam手册
+│  ├─ Figma手册
+│  ├─ Flutter手册
+│  ├─ OpenAPI手册
+│  └─ Python手册
+└─ 学科/行业
+   └─ 高等教育手册
+```
+
+建议线上路径按一级目录分层，具体 slug 可在发布前确认：
+
+- 业务：`/quanttide-handbook/business/`
+- 研发：`/quanttide-handbook/engineering/`
+- 管理：`/quanttide-handbook/management/`
+- 语言、框架和工具：`/quanttide-handbook/languages-frameworks-tools/`
+- 学科/行业：`/quanttide-handbook/disciplines-industries/`
+
+工作手册写作参考
+`https://quanttide.github.io/quanttide-handbook-of-business-entity/qtdata/connect/email/`，
+但不机械照搬该页面结构。核心标准是：工作手册要写成能照着办的文档，不写成章程，
+也不写成空泛说明。
+
+不同类型手册可按内容调整结构：
+
+- 流程类内容：优先写适用范围、原则、角色、流程总览、阶段、节点、模板、期望响应和留痕规则；
+- 工具类或技术类内容：优先写使用场景、前置条件、配置步骤、操作步骤、验证方式和常见问题；
+- 管理类内容：优先写适用范围、职责分工、工作流程、检查清单、归档规则和例外处理；
+- 总入口页面：保持目录导航清爽，不强行加入流程图、模板或长篇说明。
+
+工作手册不使用章程类“第X章”“第X条”格式。标题层级应服务于执行场景：
+最大标题写具体手册或流程名称，二级标题组织角色、阶段、场景或规则，三级标题用于具体动作节点或操作步骤。
 
 ## 四、单个文档仓库上线流程
 
@@ -125,6 +199,13 @@ slug 一旦发布，原则上不再修改，避免旧链接失效。
 - TOC 分组；
 - 页面文件名；
 - 线上访问路径。
+
+若子手册接入 `quanttide-handbook`，还应明确：
+
+- 所属一级目录：业务、研发、管理、语言/框架/工具、学科/行业；
+- 子手册短路径，例如 `devops`、`data-engineering`、`product-development`；
+- 线上访问路径，例如 `https://docs.quanttide.com/quanttide-handbook/engineering/devops/`；
+- 总入口中对应链接是否同步替换为新地址。
 
 ### 阶段 3：准备部署 CI
 
@@ -240,34 +321,69 @@ https://docs.quanttide.com/<slug>/
 
 每个仓库先判断内容是否已经脱离“骨架状态”。如果只有少量占位 Markdown，则先补内容，不直接上线。
 
-### 第 2 步：选一个仓库完成端到端上线
+### 第 2 步：规划 handbook 子手册
 
-选择内容最完整的仓库，完成：
+`quanttide-handbook` 总入口和五个一级目录页已经上线，不再重新判断是否需要单独发布。下一步围绕总入口下的
+5 个一级目录逐个处理子手册：
 
-- 构建确认；
-- workflow 配置；
-- Secrets 配置；
-- OSS 发布；
-- 线上验收；
-- 首页入口更新。
+1. 业务；
+2. 研发；
+3. 管理；
+4. 语言、框架和工具；
+5. 学科/行业。
 
-### 第 3 步：复制已验证流程
+处理原则：
 
-第一个仓库上线成功后，复用相同 workflow 和检查表，逐个处理其他仓库。每次只修改：
+- 子手册尽量放在 `https://docs.quanttide.com/quanttide-handbook/` 命名空间下；
+- 每个子手册发布前先确认所属一级目录、短路径和线上 URL；
+- 内容成熟的先上线，内容不完整的先标记状态，不硬凑成完整手册；
+- `qtdocs` 首页保持总入口，不把 33 个子手册全部平铺到首页。
 
-- 仓库对应的 `slug`；
-- `BASE_URL`；
-- OSS 上传路径；
-- 首页名称和简介。
+建议优先检查内容相对完整的子手册：
 
-### 第 4 步：处理 handbook
+1. DevOps 手册；
+2. 数据工程手册；
+3. 产品研发手册；
+4. 生成式人工智能手册；
+5. Python 手册；
+6. 云计算手册；
+7. 团队协作手册；
+8. Flutter 手册。
 
-等子手册完成并上线后，再重新评估 `quanttide-handbook`：
+第二批检查已有部分内容的子手册：
 
-- 如果它只是外部链接聚合页，确认是否仍需要单独发布；
-- 如果它承担统一目录职责，给它确定独立 slug；
-- 确认所有内部链接指向已经上线的文档地址；
-- 再按本计划执行部署和首页接入。
+- 财务管理手册；
+- 创赛管理手册；
+- 数字资产管理手册；
+- 团队管理手册；
+- 项目管理手册；
+- Django 手册；
+- Figma 手册。
+
+目录或骨架型子手册先暂缓直接发布，除非负责人确认只作为导航页上线。
+
+### 第 3 步：逐个上线 handbook 子手册
+
+每个子手册按以下顺序处理：
+
+1. 盘点内容成熟度；
+2. 按工作手册写作准则整理或补齐首页；
+3. 确认所属一级目录和线上路径；
+4. 配置构建和 OSS 发布路径；
+5. 发布并验收；
+6. 回到 `quanttide-handbook` 总入口更新对应链接。
+
+如果子手册来自独立仓库，仍保留独立仓库维护方式，只把构建产物发布到
+`quanttide-handbook` 对应子路径下。
+
+### 第 4 步：维护 handbook 总入口
+
+总入口的职责是提供五个一级目录和 33 个子手册的导航。后续维护时重点确认：
+
+- 五个一级目录完整；
+- 子手册链接逐步替换为 `docs.quanttide.com/quanttide-handbook/...` 下的新地址；
+- 已上线、待完善、暂缓发布的状态清楚；
+- 总入口不写成长篇说明，不替代具体子手册内容。
 
 ## 六、发布记录
 
@@ -364,6 +480,20 @@ slug：`quanttide-handbook`
 结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
 备注：仅发布量潮工作手册总导航入口；页面展示 `_toc.yml` 中 5 个一级目录和 33 个子手册链接，未修改子手册仓库、`_toc.yml` 或子模块引用。
 
+仓库：`quanttide/quanttide-handbook`
+slug：`quanttide-handbook`
+版本或 commit：`79bd7eb`、`7546d84`
+发布地址：
+- https://docs.quanttide.com/quanttide-handbook/
+- https://docs.quanttide.com/quanttide-handbook/business/
+- https://docs.quanttide.com/quanttide-handbook/engineering/
+- https://docs.quanttide.com/quanttide-handbook/management/
+- https://docs.quanttide.com/quanttide-handbook/languages-frameworks-tools/
+- https://docs.quanttide.com/quanttide-handbook/disciplines-industries/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
+备注：新增五个一级目录页：业务、研发、管理、语言/框架/工具、学科/行业；总入口改为一级目录导航，33 个子手册链接保留在对应目录页中，暂未迁移子手册本体。
+
 ## 七、固定规则和已知坑
 
 以下规则不能随意改动：
@@ -379,6 +509,9 @@ slug：`quanttide-handbook`
 - OSS 静态网站托管必须开启 `SupportSubDir=true`；
 - 发布后 CDN 可能仍缓存旧响应，必要时重新部署或等待 TTL 过期。
 - 正式章程文档发布前必须先确认放置目录，并按章程格式整理为负责人审核过的草稿。
+- 工作手册发布前必须先确认放到 `quanttide-handbook` 下哪个一级目录和子路径。
+- 工作手册写作以“能照着办”为标准，参考成熟样文，但不机械套用固定结构。
+- 工作手册不使用章程类“第X章”“第X条”格式。
 
 ## 八、完成标准
 
@@ -395,8 +528,8 @@ slug：`quanttide-handbook`
 
 下一次继续工作时，先执行：
 
-1. 继续盘点第二大脑下属的其他文档仓库；
-2. 判断各仓库是否已经具备独立上线或接入既有站点的条件；
-3. 发布前先确认目标站点、目录、TOC 分组和访问路径；
-4. 上线成功后更新 `public/apps.json` 或目标站点目录，并补充本文件的发布记录；
-5. 等子手册上线后，重新评估并处理 `quanttide-handbook`。
+1. 从 `quanttide-handbook` 子手册开始，优先检查 DevOps 手册、数据工程手册、产品研发手册和生成式人工智能手册；
+2. 判断目标子手册是否具备上线条件，内容不足时先标记为待完善；
+3. 发布前先确认所属一级目录、子路径、TOC 分组和访问地址；
+4. 按工作手册写作准则整理内容，做到可执行、可检查、可留痕；
+5. 上线成功后更新 `quanttide-handbook` 总入口链接，并补充本文件的发布记录。
