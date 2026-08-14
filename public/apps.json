@@ -6,6 +6,11 @@
       "description": "程序性记忆：工作章程、手册、教程"
     },
     {
+      "slug": "quanttide-handbook",
+      "name": "量潮工作手册",
+      "description": "量潮工作手册体系的总导航入口"
+    },
+    {
       "slug": "quanttide-intention-of-business-entity",
       "name": "量潮科技工作意图",
       "description": "各业务和职能的意图"

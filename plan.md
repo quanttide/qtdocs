@@ -43,8 +43,9 @@ qtdocs 仓库
 - [x] 独立评估并上线 `quanttide-intention-of-payment-engineering`；
 - [x] 独立上线 `quanttide-intention-of-human-resources`；
 - [x] 独立上线 `quanttide-intention-of-data-engineering`；
+- [x] 独立上线 `quanttide-handbook` 总入口；
 - [ ] 继续盘点第二大脑下属的其他文档仓库；
-- [ ] 等子手册上线后，评估并处理 `quanttide-handbook`；
+- [ ] 继续逐个评估并处理 `quanttide-handbook` 下属子手册；
 - [x] 每次新增站点后更新 `public/apps.json`；
 - [x] 每次上线后补充发布记录。
 
@@ -54,7 +55,7 @@ qtdocs 仓库
 
 1. 先处理内容相对完整、能够独立访问的 intention 文档；
 2. 再处理内容已经稳定的第二大脑子文档；
-3. `quanttide-handbook` 放在子手册上线之后；
+3. `quanttide-handbook` 先作为总入口上线，子手册按内容成熟度逐个处理；
 4. 内容仍是空骨架的仓库暂不发布，只做内容跟踪。
 
 原则：先完整跑通一个仓库，再批量复制流程。
@@ -354,6 +355,14 @@ slug：`quanttide-intention-of-data-engineering`
 负责人：`ztzzh`
 结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
 备注：独立发布 MyST 文档站；首页、量潮数据云商业模式页面和 `BASE_URL` 均已验证正常。
+
+仓库：`quanttide/quanttide-handbook`
+slug：`quanttide-handbook`
+版本或 commit：`3a1a040`
+发布地址：https://docs.quanttide.com/quanttide-handbook/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
+备注：仅发布量潮工作手册总导航入口；页面展示 `_toc.yml` 中 5 个一级目录和 33 个子手册链接，未修改子手册仓库、`_toc.yml` 或子模块引用。
 
 ## 七、固定规则和已知坑
 
