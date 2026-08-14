@@ -40,9 +40,9 @@ qtdocs 仓库
 
 ### 待完成
 
-- [x] 评估并上线 `quanttide-intention-of-payment-engineering`；
-- [x] 评估并上线 `quanttide-intention-of-human-resources`；
-- [x] 评估并上线 `quanttide-intention-of-data-engineering`；
+- [x] 独立评估并上线 `quanttide-intention-of-payment-engineering`；
+- [x] 独立上线 `quanttide-intention-of-human-resources`；
+- [x] 独立上线 `quanttide-intention-of-data-engineering`；
 - [ ] 继续盘点第二大脑下属的其他文档仓库；
 - [ ] 等子手册上线后，评估并处理 `quanttide-handbook`；
 - [x] 每次新增站点后更新 `public/apps.json`；
@@ -61,9 +61,17 @@ qtdocs 仓库
 
 ### 章程类文档特别规则
 
-当 intention 文档、日志提炼内容或其他资料需要纳入 `quanttide-bylaw-of-business-entity` 等正式章程站点时，先按现有章程格式整理为草稿，并交由负责人审核后再发布。
+意图（intention）文档默认作为独立文档站点发布，不自动纳入
+`quanttide-bylaw-of-business-entity` 等正式章程站点。
 
-章程格式统一遵循：
+独立发布时保留 intention 文档自身的结构、标题层级和表达方式，
+不套用正式章程格式，不强制使用“第X章”或“第X条”等条款编号。
+
+只有负责人明确确认目标站点、目录和页面用途后，才可以将 intention
+文档或其整理结果纳入正式章程站点。已经存在的章程页面属于历史派生内容，
+不替代对应 intention 文档的独立上线。
+
+只有明确制作章程类派生文档时，才遵循以下章程格式：
 
 - 一级标题使用 `# 量潮科技<业务域><章程类型>章程`；
 - 二级标题使用 `## 第X章 <章节名>`；
@@ -225,9 +233,9 @@ https://docs.quanttide.com/<slug>/
 
 建议顺序：
 
-1. `quanttide-intention-of-payment-engineering`（已提交）
-2. `quanttide-intention-of-human-resources`（已提交）
-3. `quanttide-intention-of-data-engineering`（已提交）
+1. `quanttide-intention-of-payment-engineering`（独立站点，已上线）
+2. `quanttide-intention-of-human-resources`（独立站点，已上线）
+3. `quanttide-intention-of-data-engineering`（独立站点，已上线）
 
 每个仓库先判断内容是否已经脱离“骨架状态”。如果只有少量占位 Markdown，则先补内容，不直接上线。
 
@@ -311,7 +319,7 @@ slug：`quanttide-intention-of-payment-engineering`
 发布地址：https://quanttide.github.io/quanttide-bylaw-of-business-entity/human/training/
 负责人：`ztzzh`
 结果：GitHub Actions 构建和 GitHub Pages 部署成功，线上验收通过。
-备注：将 `quanttide-intention-of-human-resources` 的培训意图整理为《量潮科技培训工作章程》，按 7 章 29 条章程格式接入人力资源目录。
+备注：历史派生页面，将 `quanttide-intention-of-human-resources` 的培训意图整理为《量潮科技培训工作章程》；不替代 intention 文档独立上线。
 
 仓库：`quanttide/quanttide-bylaw-of-business-entity`
 发布位置：商务管理目录，`business/payment-engineering.md`
@@ -319,7 +327,7 @@ slug：`quanttide-intention-of-payment-engineering`
 发布地址：https://quanttide.github.io/quanttide-bylaw-of-business-entity/business/payment-engineering/
 负责人：`ztzzh`
 结果：GitHub Actions 构建和 GitHub Pages 部署成功，线上验收通过。
-备注：将支付工程意图整理为《量潮科技支付工程章程》，按 6 章 21 条章程格式接入商务管理目录。
+备注：历史派生页面，将支付工程意图整理为《量潮科技支付工程章程》；不替代独立 intention 站点。
 
 仓库：`quanttide/quanttide-bylaw-of-business-entity`
 发布位置：量潮云目录，`qtcloud/metering.md`
@@ -327,7 +335,25 @@ slug：`quanttide-intention-of-payment-engineering`
 发布地址：https://quanttide.github.io/quanttide-bylaw-of-business-entity/qtcloud/metering/
 负责人：`ztzzh`
 结果：GitHub Actions 构建和 GitHub Pages 部署成功，线上验收通过。
-备注：将 `quanttide-intention-of-data-engineering` 的商业模式整理为《量潮云计量计费章程》，按 7 章 31 条章程格式接入量潮云目录，并置于销售管理章程之前；补充按量执行与订阅、套餐等销售形态的边界，以及与《量潮科技支付工程章程》的账务衔接。
+备注：历史派生页面，将 `quanttide-intention-of-data-engineering` 的商业模式整理为《量潮云计量计费章程》；不替代 intention 文档独立上线。
+
+### 2026-08-14
+
+仓库：`quanttide/quanttide-intention-of-human-resources`
+slug：`quanttide-intention-of-human-resources`
+版本或 commit：`5ff0556`
+发布地址：https://docs.quanttide.com/quanttide-intention-of-human-resources/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
+备注：独立发布 MyST 文档站；首页、培训模块页面和 `BASE_URL` 均已验证正常。
+
+仓库：`quanttide/quanttide-intention-of-data-engineering`
+slug：`quanttide-intention-of-data-engineering`
+版本或 commit：`e9a7d71`
+发布地址：https://docs.quanttide.com/quanttide-intention-of-data-engineering/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
+备注：独立发布 MyST 文档站；首页、量潮数据云商业模式页面和 `BASE_URL` 均已验证正常。
 
 ## 七、固定规则和已知坑
 

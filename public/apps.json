@@ -14,6 +14,16 @@
       "slug": "quanttide-intention-of-payment-engineering",
       "name": "量潮支付工程意图",
       "description": "记录支付工程的目标、原则、价值主张与演化路径"
+    },
+    {
+      "slug": "quanttide-intention-of-human-resources",
+      "name": "量潮人力资源意图",
+      "description": "记录人力资源领域的目标、原则、价值主张与培训意图"
+    },
+    {
+      "slug": "quanttide-intention-of-data-engineering",
+      "name": "量潮数据工程意图",
+      "description": "记录数据工程领域的目标、原则、价值主张与商业模式"
     }
   ]
 }
