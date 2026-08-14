@@ -497,10 +497,11 @@ slug：`quanttide-handbook`
 仓库：`quanttide/quanttide-handbook-of-devops`
 slug：`quanttide-handbook-of-devops`
 版本或 commit：`ab4b727`
+后续修复：`07df5c9`
 发布地址：https://docs.quanttide.com/quanttide-handbook/engineering/devops/
 负责人：`ztzzh`
 结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
-备注：首个子手册已迁移到 `quanttide-handbook` 命名空间下；研发目录页已同步更新到新地址。
+备注：首个子手册已迁移到 `quanttide-handbook` 命名空间下；研发目录页已同步更新到新地址。总入口 workflow 已修正为不清空 `quanttide-handbook/` 前缀，避免误删子手册。
 
 ## 七、固定规则和已知坑
 
@@ -520,6 +521,7 @@ slug：`quanttide-handbook-of-devops`
 - 工作手册发布前必须先确认放到 `quanttide-handbook` 下哪个一级目录和子路径。
 - 工作手册写作以“能照着办”为标准，参考成熟样文，但不机械套用固定结构。
 - 工作手册不使用章程类“第X章”“第X条”格式。
+- `quanttide-handbook` 总入口部署不得递归清空整个前缀，否则会误删已上线的子手册。
 
 ## 八、完成标准
 
