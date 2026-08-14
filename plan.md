@@ -37,6 +37,8 @@ qtdocs 仓库
 - [x] `quanttide-intention-of-business-entity` 已上线；
 - [x] 文档发布规则已整理到 `docs/publish-rules.md`；
 - [x] 首页已通过 `public/apps.json` 管理文档入口。
+- [x] 将云计算手册迁入 `quanttide-handbook/engineering/cloud-computing/`。
+- [x] 将团队协作手册迁入 `quanttide-handbook/management/collaboration/`。
 
 ### 待完成
 
@@ -44,6 +46,8 @@ qtdocs 仓库
 - [x] 独立上线 `quanttide-intention-of-human-resources`；
 - [x] 独立上线 `quanttide-intention-of-data-engineering`；
 - [x] 独立上线 `quanttide-handbook` 总入口；
+- [x] 独立上线 `quanttide-handbook/engineering/devops/`；
+- [x] 云计算手册及其之前的子手册已迁入 `quanttide-handbook`；
 - [ ] 继续盘点第二大脑下属的其他文档仓库；
 - [x] 按五个一级目录规划并上线 `quanttide-handbook` 一级目录页；
 - [x] 子手册上线后更新 `quanttide-handbook` 总入口对应链接；
@@ -339,16 +343,9 @@ https://docs.quanttide.com/<slug>/
 - 内容成熟的先上线，内容不完整的先标记状态，不硬凑成完整手册；
 - `qtdocs` 首页保持总入口，不把 33 个子手册全部平铺到首页。
 
-建议优先检查内容相对完整的子手册：
+建议优先检查内容相对完整的子手册。团队协作手册已上线，后续首轮只剩下 Flutter 手册：
 
-1. DevOps 手册；
-2. 数据工程手册；
-3. 产品研发手册；
-4. 生成式人工智能手册；
-5. Python 手册；
-6. 云计算手册；
-7. 团队协作手册；
-8. Flutter 手册。
+1. Flutter 手册。
 
 第二批检查已有部分内容的子手册：
 
@@ -503,6 +500,30 @@ slug：`quanttide-handbook-of-devops`
 结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
 备注：首个子手册已迁移到 `quanttide-handbook` 命名空间下；研发目录页已同步更新到新地址。总入口 workflow 已修正为不清空 `quanttide-handbook/` 前缀，避免误删子手册。
 
+仓库：`quanttide/quanttide-handbook-of-cloud-computing`
+slug：`quanttide-handbook-of-cloud-computing`
+版本或 commit：`858b3f0`
+发布地址：https://quanttide.github.io/quanttide-handbook-of-cloud-computing/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 GitHub Pages 部署成功，线上验收通过。
+备注：旧的独立站点发布记录；当前主入口已迁入 `quanttide-handbook/engineering/cloud-computing/`，不再作为主导航入口。
+
+仓库：`quanttide/quanttide-handbook`
+slug：`quanttide-handbook`
+版本或 commit：`bac3428`
+发布地址：https://docs.quanttide.com/quanttide-handbook/engineering/cloud-computing/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
+备注：云计算手册已并入研发目录本地页；`engineering/` 目录页不再使用外链跳转样式。
+
+仓库：`quanttide/quanttide-handbook`
+slug：`quanttide-handbook`
+版本或 commit：`f9c9bce`
+发布地址：https://docs.quanttide.com/quanttide-handbook/management/collaboration/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
+备注：团队协作手册已并入管理目录本地页；`management/` 目录页不再使用外链跳转样式。
+
 ## 七、固定规则和已知坑
 
 以下规则不能随意改动：
@@ -521,6 +542,7 @@ slug：`quanttide-handbook-of-devops`
 - 工作手册发布前必须先确认放到 `quanttide-handbook` 下哪个一级目录和子路径。
 - 工作手册写作以“能照着办”为标准，参考成熟样文，但不机械套用固定结构。
 - 工作手册不使用章程类“第X章”“第X条”格式。
+- 以后所有要在 `quanttide-handbook` 下上线的内容，都先按“确认目录 -> 对齐手册格式 -> 去掉外链跳转 -> 本地构建验证 -> 提交推送 -> 补发布记录”这套流程走。
 - `quanttide-handbook` 总入口部署不得递归清空整个前缀，否则会误删已上线的子手册。
 
 ## 八、完成标准
@@ -538,8 +560,9 @@ slug：`quanttide-handbook-of-devops`
 
 下一次继续工作时，先执行：
 
-1. 从 `quanttide-handbook` 子手册开始，优先检查 DevOps 手册、数据工程手册、产品研发手册和生成式人工智能手册；
-2. 判断目标子手册是否具备上线条件，内容不足时先标记为待完善；
-3. 发布前先确认所属一级目录、子路径、TOC 分组和访问地址；
-4. 按工作手册写作准则整理内容，做到可执行、可检查、可留痕；
-5. 上线成功后更新 `quanttide-handbook` 总入口链接，并补充本文件的发布记录。
+1. 从 `quanttide-handbook` 子手册继续，优先检查 Flutter 手册；
+2. 云计算手册及其之前的内容已上线，团队协作手册也已上线，后续不再作为首轮对象；
+3. 判断目标子手册是否具备上线条件，内容不足时先标记为待完善；
+4. 发布前先确认所属一级目录、子路径、TOC 分组和访问地址；
+5. 按工作手册写作准则整理内容，做到可执行、可检查、可留痕；
+6. 上线成功后更新 `quanttide-handbook` 总入口链接，并补充本文件的发布记录。
