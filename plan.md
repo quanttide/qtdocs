@@ -40,6 +40,7 @@ qtdocs 仓库
 - [x] 将云计算手册迁入 `quanttide-handbook/engineering/cloud-computing/`。
 - [x] 将团队协作手册迁入 `quanttide-handbook/management/collaboration/`。
 - [x] 将 Flutter 手册迁入 `quanttide-handbook/languages-frameworks-tools/flutter/`。
+- [x] 将财务管理手册迁入 `quanttide-handbook/management/finance/`。
 
 ### 待完成
 
@@ -348,7 +349,7 @@ https://docs.quanttide.com/<slug>/
 
 第二批检查已有部分内容的子手册：
 
-- 财务管理手册；
+- 财务管理手册（已上线）；
 - 创赛管理手册；
 - 数字资产管理手册；
 - 团队管理手册；
@@ -531,6 +532,16 @@ slug：`quanttide-handbook`
 结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
 备注：Flutter 手册已并入语言、框架和工具目录本地页；`languages-frameworks-tools/` 目录页不再使用外链跳转样式。
 
+### 2026-08-15
+
+仓库：`quanttide/quanttide-handbook`
+slug：`quanttide-handbook`
+版本或 commit：`4c620f5`
+发布地址：https://docs.quanttide.com/quanttide-handbook/management/finance/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
+备注：财务管理手册已并入管理目录本地页；`management/` 目录页不再使用 `quanttide-handbook-of-finance` 外链跳转样式。
+
 ## 七、固定规则和已知坑
 
 以下规则不能随意改动：
@@ -567,7 +578,7 @@ slug：`quanttide-handbook`
 
 下一次继续工作时，先执行：
 
-1. 从 `quanttide-handbook` 子手册继续，优先检查财务管理手册、创赛管理手册、数字资产管理手册、团队管理手册、项目管理手册、Django 手册和 Figma 手册；
+1. 从 `quanttide-handbook` 子手册继续，优先检查创赛管理手册、数字资产管理手册、团队管理手册、项目管理手册、Django 手册和 Figma 手册；
 2. 首轮内容已完成，DevOps、数据工程、产品研发、生成式人工智能、Python、云计算、团队协作和 Flutter 手册后续不再作为首轮对象；
 3. 判断目标子手册是否具备上线条件，内容不足时先标记为待完善；
 4. 发布前先确认所属一级目录、子路径、TOC 分组和访问地址；
