@@ -542,6 +542,23 @@ slug：`quanttide-handbook`
 结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
 备注：财务管理手册已并入管理目录本地页；`management/` 目录页不再使用 `quanttide-handbook-of-finance` 外链跳转样式。
 
+仓库：`quanttide/quanttide-handbook`
+slug：`quanttide-handbook`
+版本或 commit：`ff91b50`
+发布地址：
+- https://docs.quanttide.com/quanttide-handbook/engineering/devops/
+- https://docs.quanttide.com/quanttide-handbook/engineering/data-engineering/
+- https://docs.quanttide.com/quanttide-handbook/engineering/cloud-computing/
+- https://docs.quanttide.com/quanttide-handbook/engineering/generative-ai/
+- https://docs.quanttide.com/quanttide-handbook/management/product-development/
+- https://docs.quanttide.com/quanttide-handbook/management/collaboration/
+- https://docs.quanttide.com/quanttide-handbook/management/finance/
+- https://docs.quanttide.com/quanttide-handbook/languages-frameworks-tools/python/
+- https://docs.quanttide.com/quanttide-handbook/languages-frameworks-tools/flutter/
+负责人：`ztzzh`
+结果：GitHub Actions 构建和 OSS 上传成功，线上验收通过。
+备注：已上线的 9 个本地子手册按各自领域画像重写内部小标题和部分正文，覆盖原线上路径，不新增独立入口。
+
 ## 七、固定规则和已知坑
 
 以下规则不能随意改动：
@@ -559,6 +576,7 @@ slug：`quanttide-handbook`
 - 正式章程文档发布前必须先确认放置目录，并按章程格式整理为负责人审核过的草稿。
 - 工作手册发布前必须先确认放到 `quanttide-handbook` 下哪个一级目录和子路径。
 - 工作手册写作以“能照着办”为标准，参考成熟样文，但不机械套用固定结构。
+- 每本工作手册先确定自己的领域画像，再拟内部小标题；不要把所有子手册都写成同一套“适用范围、工作原则、角色分工、快速检查”。
 - 工作手册不使用章程类“第X章”“第X条”格式。
 - 以后所有要在 `quanttide-handbook` 下上线的内容，都先按“确认目录 -> 对齐手册格式 -> 去掉外链跳转 -> 本地构建验证 -> 提交推送 -> 补发布记录”这套流程走。
 - `quanttide-handbook` 总入口部署不得递归清空整个前缀，否则会误删已上线的子手册。
