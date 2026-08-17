@@ -41,6 +41,10 @@ qtdocs 仓库
 - [x] 将团队协作手册迁入 `quanttide-handbook/management/collaboration/`。
 - [x] 将 Flutter 手册迁入 `quanttide-handbook/languages-frameworks-tools/flutter/`。
 - [x] 将财务管理手册迁入 `quanttide-handbook/management/finance/`。
+- [x] 将团队管理手册迁入 `quanttide-handbook/management/team-management/`。
+- [x] 将项目管理手册迁入 `quanttide-handbook/management/project-management/`。
+- [x] 将 Django 手册迁入 `quanttide-handbook/languages-frameworks-tools/django/`。
+- [x] 将 Figma 手册迁入 `quanttide-handbook/languages-frameworks-tools/figma/`。
 
 ### 待完成
 
@@ -352,10 +356,10 @@ https://docs.quanttide.com/<slug>/
 - 财务管理手册（已上线）；
 - 创赛管理手册（已上线）；
 - 数字资产管理手册（已上线）；
-- 团队管理手册（本地草稿已整理，待审核发布）；
-- 项目管理手册（本地草稿已整理，待审核发布）；
-- Django 手册（本地草稿已整理，待审核发布）；
-- Figma 手册（本地草稿已整理，待审核发布）。
+- 团队管理手册（已上线）；
+- 项目管理手册（已上线）；
+- Django 手册（已上线）；
+- Figma 手册（已上线）。
 
 目录或骨架型子手册先暂缓直接发布，除非负责人确认只作为导航页上线。
 
@@ -365,16 +369,11 @@ https://docs.quanttide.com/<slug>/
 
 #### 待发布
 
-| 子手册 | 所属目录 | 本地路径 | 当前状态 | 下一步 |
-|--------|----------|----------|----------|--------|
-| 团队管理手册 | 管理 | `management/team-management.md` | 已按原仓库素材整理成本地草稿，尚未发布 | 用户审核后决定是否发布 |
-| 项目管理手册 | 管理 | `management/project-management.md` | 已按原仓库素材、历史议题格式和本地项目流程记录整理成本地草稿，尚未发布 | 用户审核后决定是否发布 |
-| Django 手册 | 语言、框架和工具 | `languages-frameworks-tools/django.md` | 已按原仓库素材和 Django 官方文档补成本地草稿，尚未发布 | 用户审核后决定是否发布 |
-| Figma 手册 | 语言、框架和工具 | `languages-frameworks-tools/figma.md` | 已按原仓库素材和现有量潮手册依据整理成本地草稿，尚未发布 | 用户审核后决定是否发布 |
+暂无。团队管理、项目管理、Django 和 Figma 手册已于 2026-08-17 上线。
 
 #### 第二批待审查
 
-暂无。第二批当前已上线、进入待发布，或已完成本地草稿整理。
+暂无。第二批当前已全部上线。
 
 #### 第三批暂缓或待补
 
@@ -626,6 +625,30 @@ slug：`quanttide-handbook`
 结果：GitHub Actions run `31936963169` 构建和 OSS 上传成功，10 个线上页面逐个验收通过，目录页确认已使用本地页链接且旧外链未恢复。
 备注：将上次本地草稿按原子手册素材补回平台、工具、目录、命名、命令、流程和案例细节，减少过度泛化表述；同时正式上线创赛管理手册和数字资产管理手册本地页。
 
+### 2026-08-17
+
+仓库：`quanttide/quanttide-handbook`
+slug：`quanttide-handbook`
+版本或 commit：`108be72`
+发布地址：
+- https://docs.quanttide.com/quanttide-handbook/management/team-management/
+- https://docs.quanttide.com/quanttide-handbook/management/project-management/
+- https://docs.quanttide.com/quanttide-handbook/languages-frameworks-tools/django/
+- https://docs.quanttide.com/quanttide-handbook/languages-frameworks-tools/figma/
+- https://docs.quanttide.com/quanttide-handbook/engineering/cloud-computing/
+- https://docs.quanttide.com/quanttide-handbook/engineering/data-engineering/
+- https://docs.quanttide.com/quanttide-handbook/engineering/generative-ai/
+- https://docs.quanttide.com/quanttide-handbook/management/product-development/
+- https://docs.quanttide.com/quanttide-handbook/management/collaboration/
+- https://docs.quanttide.com/quanttide-handbook/management/competitions/
+- https://docs.quanttide.com/quanttide-handbook/management/digital-assets/
+- https://docs.quanttide.com/quanttide-handbook/management/finance/
+- https://docs.quanttide.com/quanttide-handbook/languages-frameworks-tools/python/
+- https://docs.quanttide.com/quanttide-handbook/languages-frameworks-tools/flutter/
+负责人：`ztzzh`
+结果：GitHub Actions run `32039893677` 构建和 OSS 上传成功，14 个线上页面逐个验收通过。
+备注：团队管理、项目管理、Django 和 Figma 手册正式并入本地页；同时重新上线本轮改过的子手册页面，清理“源仓库、原仓库、源素材、原素材、本地草稿、当前素材”等迁移口吻，保留具体工具、流程、目录、命名、命令和案例内容。
+
 ## 七、固定规则和已知坑
 
 以下规则不能随意改动：
@@ -664,8 +687,8 @@ slug：`quanttide-handbook`
 
 下一次继续工作时，先执行：
 
-1. 先查看“handbook 子手册未发布清单”，如没有待发布项，则从“第二批待审查”继续；
-2. 首轮内容已完成，DevOps、数据工程、产品研发、生成式人工智能、Python、云计算、团队协作、Flutter、财务、创赛和数字资产手册后续不再作为首轮对象；
+1. 先查看“handbook 子手册未发布清单”，如没有待发布项，则从“第三批暂缓或待补”中选择负责人指定的目标先审查；
+2. 首轮和第二批内容已完成，DevOps、数据工程、产品研发、生成式人工智能、Python、云计算、团队协作、Flutter、财务、创赛、数字资产、团队管理、项目管理、Django 和 Figma 手册后续不再作为待发布对象；
 3. 判断目标子手册是否具备上线条件，内容不足时先标记为待完善；
 4. 发布前先确认所属一级目录、子路径、TOC 分组和访问地址；
 5. 按工作手册写作准则整理内容，做到可执行、可检查、可留痕；
